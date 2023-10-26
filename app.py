@@ -75,6 +75,7 @@ st.dataframe(df_selection)
 df1 = df["num_conta"].copy()
 df2 = df_list["num_conta"].copy()
 df_new = pd.concat([df1, df2]).drop_duplicates(keep=False)
+#df_new["num_conta"] = df_new['num_conta'].astype(str)
 
 st.title(":warning: Contas não iniciadas")
 st.dataframe(df_new)
